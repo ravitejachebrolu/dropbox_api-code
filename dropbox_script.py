@@ -1,9 +1,7 @@
 __author__ = 'raviteja'
 
-# Include the Dropbox SDK libraries
-from dropbox import client, rest, session
 
-# Get your app key and secret from the Dropbox developer website
+from dropbox import client, rest, session
 
 APP_KEY = 'uj4v8hqnpm3qdsb' #u need to change to your's
 APP_SECRET = 'oh7543hw9mqgkzi' #u need to change to your's
