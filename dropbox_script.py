@@ -30,17 +30,15 @@ token_file.close()
 sess.set_token(token_key,token_secret)
 client = client.DropboxClient(sess)
 #stored_creds = open(CONF_DIR + self.TOKEN_FILE).read()
-print "linked account:", client.account_info()
-#uploading of a file
+uploading of a file
 f = open('today.txt')
 response = client.put_file('/magnum_opus.txt', f)
-print "uploaded:", response
 #listing of the files
 folder_metadata = client.metadata('/')
-print "metadata:", folder_metadata
+
 #downloading the files
 f, metadata = client.get_file_and_metadata('/magnum_opus.txt')
 out = open('magnum_opus.txt', 'wb')
 out.write(f.read())
 out.close()
-print metadata
+
